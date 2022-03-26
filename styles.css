@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(39, 37, 37);
+}
+
+/*NAV*/
+
+nav{
+    background-image: linear-gradient(to right, #262469, #00ff88);
+    padding-bottom: 2.5%;
+    padding-top: 2.5%;
+    text-align: center;
+    border-bottom: rgba(194, 196, 204, 70%) 5px solid;
+    z-index: 1;
+}
+ul.header{
+    list-style-type: none;
+}
+li.menu{
+    display: inline;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 1.75%;
+    border-radius: 5px;
+    transition: background-color .5s;
+}
+li.menu:hover{
+    background-color: rgba(194, 196, 204, 70%);
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Helvetica;
+    font-size: 2vw;
+    text-align: center;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    width: inherit;
+}
+.sticky + .center{
+    padding-top: -40px;
+}
+
+/*HOME*/
+
+.particle{
+    width: 2%;
+    height: 2%;
+    background-color: #262469;
+    box-shadow: 0 0 10px 10px #00ff88;
+    position: fixed;
+    border-radius: 50%;
+    animation-name: particle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes particle{
+    0% {left: 0px; width: 2%; height: 2%;}
+    25% {width: 4%; height: 6%;}
+    50% {left: 98%; background-color: #00ff88; width: 2%; height: 2%; box-shadow: 0 0 20px 20px #262469;}
+    75% {width: 4%; height: 6%;}
+    100%{left: 0px; width: 2%; height: 2%;}
+}
+img.portrait{
+    height: 25%;
+    width: 25%;
+    display: block;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5%;
+    margin-top: 5%;
+    border-radius: 100%;
+    border: 5px solid rgba(39, 45, 66, 0.7);
+}
+h1{
+    text-align: center;
+    font-family: Helvetica;
+    background-color: rgba(194, 196, 204, 70%);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-bottom: 5%;
+    padding: 2%;
+    font-size: 3vw;
+}
+p.mid{
+    background-image: linear-gradient(to right, #262469, #00ff88);
+    font-family: Helvetica;
+    font-size: 2vw;
+    text-align: center;
+    padding: 5%;
+}
+
+/*PROJECTS*/
+
+div.projects{
+    background-position: center;
+    padding-bottom: 20%;
+    padding-top: 10%;
+}
+section.georgia{
+    background-color: rgba(194, 196, 204, 70%);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    margin-bottom: 5%;
+    padding: 5%;
+}
+h2{
+    font-family: Helvetica;
+    text-align: center;
+    font-size: 2vw;
+}
+img.project{
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    border: 10px solid rgba(39, 45, 66, 0.7);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    transition: .5s;
+}
+img.project:hover{
+    transform: scale(1.2);
+}
+section.beach{
+    background-color: rgba(194, 196, 204, 70%);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    border-radius: 25px;
+    margin-bottom: 5%;
+}
+section.schubert{
+    background-color: rgba(194, 196, 204, 70%);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    border-radius: 25px;
+}
+
+/*ABOUT*/
+
+div.about{
+    background-position: center;
+    padding-bottom: 20%;
+    padding-top: 10%;
+}
+img.headshot{
+    height: 25%;
+    width: 25%;
+    display: block;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5%;
+    border-radius: 100%;
+    border: 5px solid rgba(39, 45, 66, 0.7);
+}
+div.about2{
+    background-color: rgba(194, 196, 204, 70%);
+    font-family: Georgia;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    padding: 5%;
+    font-size: 1.5vw;
+}
+
+/*CONTACT*/
+
+div.contact{
+    background-position: center;
+    padding-bottom: 20%;
+    padding-top: 10%;
+}
+div.form{
+    background-color: rgba(194, 196, 204, 70%);
+    border-radius: 25px;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 5%;
+}
+form{
+    margin-left: 15%;
+    margin-right: 25%;
+}
+input[type=text] {
+    padding: 12px 20px;
+    font-family: Helvetica;
+    border-radius: 4px;
+    border: 2px solid #262544;
+    background-color: #3faa73;
+    font-size: 1.5vw;
+}
+div.error{
+    color: red;
+    font-family: Helvetica;
+    font-size: 1.5vw;
+    visibility: hidden;
+}
+::placeholder {
+    color: #262544;
+    opacity: 1; /* Firefox */
+  }
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #262544;
+  }
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #262544;
+  }
+textarea{
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 2px solid #262469;
+    font-family: Helvetica;
+    background-color: #3faa73;
+    font-size: 1.5vw;
+}
+input[type=submit]{
+    margin-top: 3%;
+    border-radius: 4px;
+    border: 2px solid #262469;
+    background-color: #3faa73;
+    cursor: pointer;
+    width: 90%;
+    height: 30%;
+    padding: 4%;
+    font-size: 1.5vw;
+    transition: background-color .5s;
+}
+input[type=submit]:hover {
+    background-color: #128865;
+}
+
+/*FOOTER*/
+
+footer{
+    background-image: linear-gradient(to right, #262469, #00ff88);
+    padding-top: 2%;
+    padding-bottom: 1%;
+    bottom: 0;
+    border-top: rgba(194, 196, 204, 70%) 5px solid;
+}
+ul.social{
+    text-align: center;
+}
+li.icon{
+    display: inline;
+    padding: 2.5%;
+}
+p.thanks{
+    font-family: Helvetica;
+    font-size: 2vw;
+    text-align: center;
+}
+#icon{
+    transition: .5s;
+}
+#icon:hover{
+    transform: scale(1.5);
+}
+p.phone{
+    text-align: center;
+    font-family: Helvetica;
+    margin-top: 2%;
+    font-size: 1vw;
+}
+p.copyright{
+    text-align: center;
+    font-family: Helvetica;
+    margin-top: .5%;
+    font-size: 1vw;
+}
+
+/*CONFIRMATION*/
+
+div.confirmation{
+    text-align: center;
+    font-family: Helvetica;
+    background-color: rgba(194, 196, 204, 70%);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    padding: 2%;
+    font-size: 3vw;
+}
+footer.confirmation{
+    position: fixed;
+    width: 100%;
+}
